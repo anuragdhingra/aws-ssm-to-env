@@ -19,7 +19,7 @@ jq_filter="$INPUT_JQ_FILTER"
 simple_json="$INPUT_SIMPLE_JSON"
 
 format_var_name () {
-  echo "$1" | awk -v prefix="$prefix" -F. '{print prefix $NF}' | tr "[:lower:]" "[:upper:]"
+  echo "$1" | awk -v prefix="$prefix" -F. '{print prefix $NF}'
 }
 
 get_ssm_param() {
